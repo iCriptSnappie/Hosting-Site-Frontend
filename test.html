@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Network</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Container and central logo */
+        .network-container {
+            position: relative;
+            text-align: center;
+            padding: 40px;
+            margin: 0 auto;
+        }
+        .central-logo {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+
+        /* Server location items */
+        .server-item {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #333;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            transform: translate(-50%, -50%);
+        }
+
+        /* Server positions */
+        .server-india { top: 10%; left: 50%; }
+        .server-usa { top: 30%; left: 10%; }
+        .server-finland { top: 30%; left: 90%; }
+        .server-germany { top: 70%; left: 15%; }
+        .server-singapore { top: 70%; left: 85%; }
+        .server-netherlands { top: 90%; left: 50%; }
+
+        /* Line connections (example for top server) */
+        .line {
+            position: absolute;
+            width: 2px;
+            background: #ccc;
+            transform-origin: top;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .network-container {
+                padding: 20px;
+            }
+            .server-item {
+                width: 60px;
+                height: 60px;
+                font-size: 10px;
+            }
+            .central-logo {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center my-5">
+    <h2>Our Global Network</h2>
+    <p>We have 7+ servers in 6 locations to give your site a boost.</p>
+</div>
+
+<div class="network-container">
+    <!-- Central logo -->
+    <div class="central-logo">
+        Global Network
+    </div>
+
+    <!-- Server locations -->
+    <div class="server-item server-india">
+        <img src="https://flagcdn.com/in.svg" alt="India" width="30"><br>
+        India
+    </div>
+    <div class="server-item server-usa">
+        <img src="https://flagcdn.com/us.svg" alt="USA" width="30"><br>
+        USA
+    </div>
+    <div class="server-item server-finland">
+        <img src="https://flagcdn.com/fi.svg" alt="Finland" width="30"><br>
+        Finland
+    </div>
+    <div class="server-item server-germany">
+        <img src="https://flagcdn.com/de.svg" alt="Germany" width="30"><br>
+        Germany
+    </div>
+    <div class="server-item server-singapore">
+        <img src="https://flagcdn.com/sg.svg" alt="Singapore" width="30"><br>
+        Singapore
+    </div>
+    <div class="server-item server-netherlands">
+        <img src="https://flagcdn.com/nl.svg" alt="Netherlands" width="30"><br>
+        Netherlands
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
