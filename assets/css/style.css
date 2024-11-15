@@ -1052,10 +1052,6 @@ footer {
     .popular {
       margin-top: 2.5rem;
       min-height: 100% !important;
-
-      .card-body{
-        padding: 0;
-      }
     }
   }
 }
