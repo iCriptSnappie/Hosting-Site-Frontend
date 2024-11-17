@@ -96,26 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   $("#pricing .owl-carousel").owlCarousel({
-    loop: true,
+    loop: false,
     margin: 15,
     responsiveClass: true,
-    mouseDrag: false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
+    mouseDrag: true,
+    autoplay: false,
+    nav: true,
     responsive: {
       0: {
         items: 1,
-        nav: false,
       },
       600: {
         items: 3,
-        nav: true,
       },
       1000: {
         items: 4,
-        nav: true,
-        autoplay: false,
       },
     },
   });
