@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
+
   // Pricing Carousel
   $("#pricing .owl-carousel").owlCarousel({
     loop: false,
@@ -119,29 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
   // Testimonials Carousel
-  $("#testimonials .owl-carousel").owlCarousel({
-    loop: true,
-    margin: 15,
-    responsiveClass: true,
-    mouseDrag: false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 2,
-        nav: true,
-      },
-      1000: {
-        items: 3,
-        nav: true,
-      },
-    },
-  });
+  
 });
 
 // 'Go to Top' button
