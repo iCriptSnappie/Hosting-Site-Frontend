@@ -94,6 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Re-adjust on window resize
   window.addEventListener("resize", adjustPopularCardMargin);
 
+  
+});
+
+
+$(document).ready(function () {
   // Initialize Owl Carousel for pricing
   $("#pricing .owl-carousel").owlCarousel({
     loop: false,
@@ -114,10 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-});
-
-
-$(document).ready(function () {
   // Testimonials Carousel
   $("#testimonials .owl-carousel").owlCarousel({
     loop: true,
