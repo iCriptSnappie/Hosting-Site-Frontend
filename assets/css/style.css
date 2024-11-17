@@ -1046,6 +1046,10 @@ footer {
       color: #fff;
     }
   }
+
+  .owl-stage-outer{
+    padding-top: 3rem;
+  }
 }
 @media screen and (max-width: 720px) {
   #pricing{
