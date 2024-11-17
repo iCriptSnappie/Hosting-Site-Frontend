@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
+  // Pricing Carousel
   $("#pricing .owl-carousel").owlCarousel({
     loop: false,
     margin: 15,
@@ -114,12 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
-
 });
 
-// Testimonials
 $(document).ready(function () {
+  // Testimonials Carousel
   $("#testimonials .owl-carousel").owlCarousel({
     loop: true,
     margin: 15,
@@ -148,12 +147,12 @@ $(document).ready(function () {
 // 'Go to Top' button
 document.addEventListener("DOMContentLoaded", function () {
   const goToTopButton = document.createElement("button");
-  goToTopButton.classList.add('btn-goTop');
+  goToTopButton.classList.add("btn-goTop");
   goToTopButton.innerHTML = '<i class="ri-arrow-up-line"></i>';
-  
+
   document.body.appendChild(goToTopButton);
   window.addEventListener("scroll", handleScroll);
- 
+
   goToTopButton.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
