@@ -73,32 +73,29 @@ document.addEventListener("DOMContentLoaded", function () {
     popularCard.insertBefore(newDiv, popularCard.firstChild);
   }
 
-  if (window.innerWidth <= 720) {
-    if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
-      const nextCardContainer =
-        popularCard.closest(".col-md-3").nextElementSibling;
+  // if (window.innerWidth <= 720) {
+  //   if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
+  //     const nextCardContainer =
+  //       popularCard.closest(".col-md-3").nextElementSibling;
 
-      const nextCard = nextCardContainer.querySelector(".card");
-      // nextCard.style.marginTop = "2.5rem";
-    }
-  }
+  //     const nextCard = nextCardContainer.querySelector(".card");
+  //     // nextCard.style.marginTop = "2.5rem";
+  //   }
+  // }
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth <= 720) {
-      if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
-        const nextCardContainer =
-          popularCard.closest(".col-md-3").nextElementSibling;
+  // window.addEventListener("resize", function () {
+  //   if (window.innerWidth <= 720) {
+  //     if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
+  //       const nextCardContainer =
+  //         popularCard.closest(".col-md-3").nextElementSibling;
 
-        const nextCard = nextCardContainer.querySelector(".card");
-        nextCard.style.marginTop = "2.5rem";
-      }
-    }
-  });
-});
+  //       const nextCard = nextCardContainer.querySelector(".card");
+  //       nextCard.style.marginTop = "2.5rem";
+  //     }
+  //   }
+  // });
 
-// Testimonials
-$(document).ready(function () {
-  $(".testimonials").owlCarousel({
+  $(".pricing-carousel").owlCarousel({
     loop: true,
     margin: 15,
     responsiveClass: true,
@@ -122,8 +119,34 @@ $(document).ready(function () {
     },
   });
 
-  $(".owl-prev").html('<i class="ri-arrow-left-line"></i>');
-  $(".owl-next").html('<i class="ri-arrow-right-line"></i>');
+
+});
+
+// Testimonials
+$(document).ready(function () {
+  $(".testimonials-carousel").owlCarousel({
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    mouseDrag: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 2,
+        nav: true,
+      },
+      1000: {
+        items: 3,
+        nav: true,
+      },
+    },
+  });
 });
 
 // 'Go to Top' button
@@ -151,3 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+$(document).ready(function () {
+  $(".owl-prev").html('<i class="ri-arrow-left-line"></i>');
+  $(".owl-next").html('<i class="ri-arrow-right-line"></i>');
+});
