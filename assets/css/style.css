@@ -987,8 +987,6 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: var(--color-text-primary);
-    height: 100%;
-    min-height: 30rem;
     border: 1px solid var(--color-accent-200);
     border-radius: 10px;
 
