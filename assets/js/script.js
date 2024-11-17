@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
-  $(".pricing-carousel").owlCarousel({
+  $("#pricing .owl-carousel").owlCarousel({
     loop: true,
     margin: 15,
     responsiveClass: true,
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Testimonials
 $(document).ready(function () {
-  $(".testimonials-carousel").owlCarousel({
+  $("#testimonials .owl-carousel").owlCarousel({
     loop: true,
     margin: 15,
     responsiveClass: true,
