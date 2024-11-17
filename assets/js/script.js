@@ -106,6 +106,7 @@ $(document).ready(function () {
     responsiveClass: true,
     autoplay: false,
     nav: false,
+    autoHeight:true,
     responsive: {
       0: {
         items: 1,
