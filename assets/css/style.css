@@ -1047,7 +1047,7 @@ footer {
     }
   }
 
-  .owl-stage-outer{
+  .owl-carousel .owl-stage-outer{
     padding-top: 3rem;
   }
 }
