@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Pricing
 document.addEventListener("DOMContentLoaded", function () {
-  const popularCard = document.querySelector("#pricing .popular");
-
+  // Add "🔥 Popular Picks" to the popular card
+  const popularCard = document.querySelector("#pricing .card.popular");
   if (popularCard) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("card-header", "text-center");
@@ -73,30 +73,28 @@ document.addEventListener("DOMContentLoaded", function () {
     popularCard.insertBefore(newDiv, popularCard.firstChild);
   }
 
-  // if (window.innerWidth <= 720) {
-  //   if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
-  //     const nextCardContainer =
-  //       popularCard.closest(".col-md-3").nextElementSibling;
+  // Adjust layout for smaller screens
+  const adjustPopularCardMargin = () => {
+    if (window.innerWidth <= 720 && popularCard) {
+      const nextCard = popularCard.nextElementSibling;
+      if (nextCard && nextCard.classList.contains("card")) {
+        nextCard.style.marginTop = "2.5rem";
+      }
+    } else if (popularCard) {
+      const nextCard = popularCard.nextElementSibling;
+      if (nextCard && nextCard.classList.contains("card")) {
+        nextCard.style.marginTop = ""; // Reset margin
+      }
+    }
+  };
 
-  //     const nextCard = nextCardContainer.querySelector(".card");
-  //     // nextCard.style.marginTop = "2.5rem";
-  //   }
-  // }
+  // Initial adjustment for smaller screens
+  adjustPopularCardMargin();
 
-  // window.addEventListener("resize", function () {
-  //   if (window.innerWidth <= 720) {
-  //     if (popularCard && popularCard.closest(".col-md-3").nextElementSibling) {
-  //       const nextCardContainer =
-  //         popularCard.closest(".col-md-3").nextElementSibling;
+  // Re-adjust on window resize
+  window.addEventListener("resize", adjustPopularCardMargin);
 
-  //       const nextCard = nextCardContainer.querySelector(".card");
-  //       nextCard.style.marginTop = "2.5rem";
-  //     }
-  //   }
-  // });
-
-
-  // Pricing Carousel
+  // Initialize Owl Carousel for pricing
   $("#pricing .owl-carousel").owlCarousel({
     loop: false,
     margin: 15,
@@ -118,9 +116,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 $(document).ready(function () {
   // Testimonials Carousel
-  
+  $("#testimonials .owl-arousel").owlCarousel({
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    mouseDrag: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 2,
+        nav: true,
+      },
+      1000: {
+        items: 3,
+        nav: true,
+      },
+    },
+  });
 });
 
 // 'Go to Top' button
