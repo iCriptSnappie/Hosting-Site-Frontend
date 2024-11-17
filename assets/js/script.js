@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     responsiveClass: true,
     mouseDrag: true,
     autoplay: false,
-    nav: true,
+    nav: false,
     responsive: {
       0: {
         items: 1,
