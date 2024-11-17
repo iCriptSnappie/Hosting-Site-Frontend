@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
   // Testimonials Carousel
-  $("#testimonials .owl-arousel").owlCarousel({
+  $("#testimonials .owl-carousel").owlCarousel({
     loop: true,
     margin: 15,
     responsiveClass: true,
