@@ -104,21 +104,24 @@ $(document).ready(function () {
     loop: false,
     margin: 15,
     responsiveClass: true,
-    mouseDrag: true,
     autoplay: false,
     nav: false,
     responsive: {
       0: {
         items: 1,
+        mouseDrag: true,
       },
       600: {
-        items: 3,
+        items: 2,
+        mouseDrag: true,
       },
       1000: {
         items: 4,
+        mouseDrag: false,
       },
     },
   });
+
   // Testimonials Carousel
   $("#testimonials .owl-carousel").owlCarousel({
     loop: true,
