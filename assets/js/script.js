@@ -109,12 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
         nav: false,
       },
       600: {
-        items: 2,
+        items: 3,
         nav: true,
       },
       1000: {
-        items: 3,
+        items: 4,
         nav: true,
+        autoplay: false,
       },
     },
   });
