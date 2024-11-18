@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Initial adjustment for smaller screens
-  adjustPopularCardMargin();
+  // adjustPopularCardMargin();
 
   // Re-adjust on window resize
   window.addEventListener("resize", adjustPopularCardMargin);
@@ -132,6 +132,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    dots: false,
     responsive: {
       0: {
         items: 1,

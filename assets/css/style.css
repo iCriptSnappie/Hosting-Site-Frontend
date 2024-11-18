@@ -986,8 +986,10 @@ footer {
     var(--color-bg-body) 100%
   );
 
-  .owl-item{
-    height: fit-content;
+  .owl-carousel .owl-item {
+    display: flex;
+    align-items: stretch; /* Ensures all cards have equal height */
+    height: 100%; /* Ensures the parent container adapts */
   }
 
   .card {
@@ -999,78 +1001,74 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: var(--color-text-primary);
-    height: 100%;
     border: 1px solid var(--color-accent-200);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Allows the footer to stay at the bottom */
+    justify-content: space-between; /* Balances card content */
+    height: 100%; /* Ensures the card stretches to fit the parent */
+    width: 100%;
+  }
 
+  .card-header {
+    font-family: var(--font-heading);
+    background: rgb(54, 0, 104);
+    border-radius: 10px 10px 0 0;
+  }
 
-    .card-header {
+  .amount {
+    font-size: 0.8rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: bold;
       font-family: var(--font-heading);
-      background: rgb(
-        54,
-        0,
-        104
-      ); /* Semi-transparent background for card header */
-      border-radius: 10px 10px 0 0; /* Optional: round top corners of the header */
-    }
-
-    .amount {
-      font-size: 0.8rem;
-      margin: 0;
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-
-      span {
-        font-size: 1.2rem;
-        font-weight: bold;
-        font-family: var(--font-heading);
-        color: var(--color-primary);
-      }
-    }
-
-    .card-body {
-      padding: 1.5rem;
-
-      h3 {
-        font-weight: 700;
-      }
-
-      .price-list {
-        list-style: none;
-        padding: 0;
-
-        li::before {
-          content: "\EB78";
-          font-family: "RemixIcon";
-          margin-right: 10px;
-          color: var(--color-primary-900);
-        }
-      }
-    }
-
-    .card-footer {
-      border: none;
-    }
-
-    &.popular {
-      transform: translateY(-40px);
-      min-height: 109%;
-      color: #fff;
+      color: var(--color-primary);
     }
   }
 
-  .owl-carousel .owl-stage-outer{
+  .card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Ensures the body takes the remaining space */
+  }
+
+  .price-list {
+    list-style: none;
+    padding: 0;
+
+    li::before {
+      content: "\EB78";
+      font-family: "RemixIcon";
+      margin-right: 10px;
+      color: var(--color-primary-900);
+    }
+  }
+
+  .card-footer {
+    border: none;
+  }
+
+  .card.popular {
+    transform: translateY(-40px);
+    min-height: 100%; /* Ensure height matches others even when transformed */
+    color: #fff;
+  }
+
+  .owl-carousel .owl-stage-outer {
     padding-top: 3rem;
   }
 }
+
 @media screen and (max-width: 720px) {
-  #pricing{
-    .popular {
-      margin-top: 2.5rem;
-      min-height: 100% !important;
-    }
+  #pricing .popular {
+    margin-top: 2.5rem;
+    min-height: 100% !important;
   }
 }
+
 
 /* Products */
 #products {
