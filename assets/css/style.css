@@ -986,6 +986,10 @@ footer {
     var(--color-bg-body) 100%
   );
 
+  .owl-item{
+    height: fit-content;
+  }
+
   .card {
     background: linear-gradient(
       40deg,
@@ -1053,6 +1057,10 @@ footer {
       min-height: 109%;
       color: #fff;
     }
+  }
+
+  .owl-carousel .owl-stage-outer{
+    padding-top: 3rem;
   }
 }
 @media screen and (max-width: 720px) {
